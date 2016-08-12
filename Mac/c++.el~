@@ -1,8 +1,0 @@
-(add-hook 'c++-mode-hook
-	  (lambda () '(local-set-key (kbd "f5") 'compile)))
-
-(add-hook 'c++-mode-hook
-	  (lambda () '(auto-complete-mode)))
-
-(add-hook 'c++-mode-hook
-	  (lambda () '(yas-minor-mode)))
