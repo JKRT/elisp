@@ -1,0 +1,11 @@
+					;Global keybindings 
+(global-set-key (kbd "<kp-insert>") 'other-window)
+(global-set-key (kbd "<kp-begin>")  'list-buffers)
+(global-set-key (kbd "<kp-right>" ) 'next-buffer)
+(global-set-key (kbd "<kp-left>" )  'previous-buffer)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-c") 'copy-region-as-kill)
+(global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-z") 'undo)
+(global-set-key (kbd "s-a" ) 'mark-whole-buffer)

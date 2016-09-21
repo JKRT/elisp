@@ -16,7 +16,15 @@
 (add-hook 'c++-mode-hook 'my-cpp-config)
 
 
-(custom-set-variables
- '(irony-additional-clang-options
-   '("-I/Library/Developer/CommandLineTools/usr/include/c++/v1")))
 
+(add-hook 'c++-mode-hook
+	  (lambda () '(local-set-key (kbd "f5") 'compile)))
+
+(add-hook 'c++-mode-hook
+	  (lambda () '(auto-complete-mode)))
+
+(add-hook 'c++-mode-hook
+	  (lambda () '(yas-minor-mode)))
+
+(add-hook 'c++-mode-hook
+	  (lambda () '(local-set-key (kbd "f6") 'yas-insert-snippet)))
