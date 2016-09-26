@@ -12,3 +12,8 @@
 (global-set-key (kbd "<f6>") 'shell) ; Open cmd
 (global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
 
+(defun kill-all-buffers()
+  "Kill all open buffers"
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
+
