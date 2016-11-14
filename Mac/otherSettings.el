@@ -8,3 +8,12 @@
   "Kill all open buffers"
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
+
+
+
+
+
+
+
+
+
