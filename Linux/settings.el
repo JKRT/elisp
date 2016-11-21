@@ -11,6 +11,8 @@
 (global-set-key (kbd "<f5>") 'smart-compile) ; clever compiling.
 (global-set-key (kbd "<f6>") 'shell) ; Open cmd
 (global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
+(global-set-key (kbd "<C-mouse-1>") 'find-tag)
+
 
 (defun kill-all-buffers()
   "Kill all open buffers"
