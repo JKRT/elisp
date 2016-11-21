@@ -4,7 +4,7 @@
 (add-hook 'objc-mode-hook 'irony-mode)
 
 ;Setting up Ctags
-(setq path-to-ctags "/opt/local/bin/ctags") ;
+(setq path-to-ctags "/usr/bin/ctags") ;
 
 
  (defun create-tags (dir-name)
