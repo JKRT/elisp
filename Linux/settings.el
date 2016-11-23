@@ -7,11 +7,7 @@
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 (cua-mode t)
 (tool-bar-mode -1)
-;;My own keybindings.
-(global-set-key (kbd "<f5>") 'smart-compile) ; clever compiling.
-(global-set-key (kbd "<f6>") 'shell) ; Open cmd
-(global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
-(global-set-key (kbd "<C-mouse-1>") 'find-tag)
+
 
 
 (defun kill-all-buffers()
@@ -27,3 +23,34 @@
    '("melpa" . "http://melpa.org/packages/")
    t)
   (package-initialize))
+
+(defun move-line (n)
+  "Move the current line up or down by N lines."
+  (interactive "p")
+  (setq col (current-column))
+  (beginning-of-line) (setq start (point))
+  (end-of-line) (forward-char) (setq end (point))
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (insert line-text)
+    ;; restore point to original column in moved line
+    (forward-line -1)
+    (forward-char col)))
+
+;To move lines around
+(defun move-line-up (n)
+  "Move the current line up by N lines."
+  (interactive "p")
+  (move-line (if (null n) -1 (- n))))
+
+(defun move-line-down (n)
+  "Move the current line down by N lines."
+  (interactive "p")
+  (move-line (if (null n) 1 n)))
+;;My own keybindings.
+(global-set-key (kbd "M-<up>") 'move-line-up)
+(global-set-key (kbd "M-<down>") 'move-line-down)
+(global-set-key (kbd "<f5>") 'smart-compile) ; clever compiling.
+(global-set-key (kbd "<f6>") 'shell) ; Open cmd
+(global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
+(global-set-key (kbd "<C-mouse-1>") 'find-tag)
