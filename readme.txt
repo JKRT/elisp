@@ -1,1 +1,1 @@
-My configuration files for emacs 
+My emacs configuration :)
