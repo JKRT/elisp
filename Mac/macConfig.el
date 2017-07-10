@@ -10,12 +10,6 @@
 	   (car
 	    (split-string (nth 3
 			       (split-string (current-time-string) " ") )":"))) )
-
-
-;Call the function every hour
-(run-with-timer 0 3600 'theme-change-during-night)
-  
-
 (tool-bar-mode 0)
 (show-paren-mode t)
 ;turn of annoying sound

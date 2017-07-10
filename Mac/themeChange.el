@@ -17,3 +17,6 @@
 	 (check-if-night  (load-theme 'material t))
 	 (check-if-day (load-theme 'material-light t )))))
 
+;Call the function every hour
+(run-with-timer 0 3600 'theme-change-during-night)
+  
