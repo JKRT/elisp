@@ -7,5 +7,5 @@
 (global-set-key [(s backspace )] 'backward-kill-word)
 (global-set-key [(shift s backspace)] 'kill-word) 
 (global-set-key [(s i)] 'execute-extended-command)
-
+(global-set-key (kbd "s-1")  'other-frame)
 

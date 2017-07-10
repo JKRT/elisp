@@ -7,4 +7,4 @@
 
 
 (add-hook 'emacs-lisp-mode-hook
-	  (lambda () (local-set-key [(s e)] 'eval-region)))
+	  (lambda () '(local-set-key (kbd "s-(") 'eval-region)))

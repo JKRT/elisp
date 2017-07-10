@@ -18,12 +18,10 @@
  ((> 7 (clocktime)) (load-theme 'material-light t )))
 
 
-
-
-
 (tool-bar-mode 0)
 (show-paren-mode t)
-
+;turn of annoying sound
+(setq ring-bell-function 'ignore)
 
 (load-file "./elisp/General/commands.elc")
 (load-file "./elisp/Mac/melpa.elc")
@@ -32,3 +30,9 @@
 (load-file "./elisp/Mac/otherSettings.elc")
 (load-file "./elisp/Mac/swift.elc")
 (load-file "./elisp/Mac/c++.elc")
+
+
+
+
+(package-initialize)
+(elpy-enable)
