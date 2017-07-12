@@ -11,3 +11,7 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    '(auto-complete-mode)))
+
+
+(package-initialize)
+(elpy-enable)
