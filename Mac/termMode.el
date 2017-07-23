@@ -1,4 +1,3 @@
 					;Keybinds for term
 
-
-(line-mode)
+;TODO add a quick change to line mode
