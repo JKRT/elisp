@@ -13,7 +13,9 @@
   ;Make sure that flycheck checks according to the 11 standard for C++
   ;for both GCC and Clang.
   (setq flycheck-clang-language-standard "c++11")
-  (setq flycheck-gcc-language-standard "c++11"))
+  (setq flycheck-gcc-language-standard "c++11")
+  (flycheck-mode))
+
 (add-hook 'c++-mode-hook 'my-cpp-config)
 ;Load company ironmode, and add other configurations for company-mode.
  (eval-after-load 'company
