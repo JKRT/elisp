@@ -7,6 +7,7 @@
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 (cua-mode t)
 (tool-bar-mode -1)
+(load-theme 'material t)
 
 
 
@@ -86,4 +87,6 @@
 (global-set-key (kbd "<f6>") 'shell) ; Open cmd
 (global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
 (global-set-key (kbd "<C-mouse-1>") 'find-tag)
+
+
 
