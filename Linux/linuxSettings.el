@@ -6,6 +6,7 @@
 (load-file "~/.emacs.d/elisp/Linux/c++.elc")
 (load-file "~/.emacs.d/elisp/Linux/keybindings.elc")
 (load-file "~/.emacs.d/elisp/Linux/melpa.elc")
+(load-file "~/.emacs.d/elisp/Linux/tags.elc")
 
 
 ;;Setting up Modelica mode
