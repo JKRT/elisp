@@ -18,4 +18,5 @@
 (load-file "~/.emacs.d/elisp/Mac/python.elc")
 (load-file "~/.emacs.d/elisp/Mac/themeChange.elc")
 (load-file "~/.emacs.d/elisp/Mac/melpa.elc")
-
+;For thesis writing..
+(load-file "~/.emacs.d/elisp/Mac/emacs-grammarly/emacs-grammarly.elc")
