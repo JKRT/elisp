@@ -7,5 +7,5 @@
     "Create tags file."
     (interactive "DDirectory: ")
     (shell-command
-     (format "%s -f TAGS -e -R %s" path-to-ctags 
+     (format "%s -f TAGS -R %s" path-to-ctags 
 	     (directory-file-name dir-name))))

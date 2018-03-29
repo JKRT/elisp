@@ -8,8 +8,7 @@
 (cua-mode t)
 (tool-bar-mode -1)
 (load-theme 'material t)
-
-
+(display-time-mode 1)
 
 (defun kill-all-buffers()
   "Kill all open buffers"
