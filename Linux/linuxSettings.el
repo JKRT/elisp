@@ -13,6 +13,8 @@
 (load-file "~/.emacs.d/elisp/Linux/modelica-mode/modelica-mode.elc")
 (autoload 'modelica-mode "modelica-mode" "Modelica Editing Mode" t)
 (setq auto-mode-alist (cons '("\.mo$" . modelica-mode) auto-mode-alist))
+;Modelica Mode for .mos files.
+(setq auto-mode-alist (cons '("\.mos$" . modelica-mode) auto-mode-alist))
 
 ;;Loading doremi
 (load-file "~/.emacs.d/elisp/Linux/doremi.el/doremi.elc")
