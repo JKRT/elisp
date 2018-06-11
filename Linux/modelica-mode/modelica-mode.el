@@ -739,7 +739,7 @@
 		 ;  "record" "type" "when" "while")
 		 "\\(block\\|c\\(lass\\|onnector\\)\\|end\\|"
 		 "f\\(or\\|unction\\)\\|if\\|model\\|"
-		 "record\\|type\\|uniontype\\wh\\(en\\|ile\\)\\)"
+		 "record\\|type\\|match\\|matchcontinue\\|uniontype\\wh\\(en\\|ile\\)\\)"
 		 "\\>"))
 		   (or (mdc-within-comment t)
 		   (mdc-short-class-definition)
