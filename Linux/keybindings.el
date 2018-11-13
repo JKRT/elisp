@@ -10,3 +10,4 @@
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key (kbd "s-a") 'mark-whole-buffer)
 (global-set-key (kbd "s-j") 'ace-jump-mode)
+(global-set-key (kbd "mouse-8") 'clipboard-yank)

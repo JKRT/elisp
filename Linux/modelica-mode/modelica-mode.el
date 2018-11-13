@@ -121,7 +121,7 @@
 		   0 'font-lock-keyword-face)
 	 (list (concat "\\<"
 			   (regexp-opt
-			   '("algorithm" "equation" "public" "protected" "match" "matchcontinue" "local") t)
+			   '("algorithm" "equation" "public" "protected" "match" "matchcontinue" "local" "guard") t)
 			   "\\>")
 		   0 'font-lock-keyword-face)
 	 (list (concat "\\<"

@@ -18,3 +18,5 @@
 
 ;;Loading doremi
 (load-file "~/.emacs.d/elisp/Linux/doremi.el/doremi.elc")
+;;Turn of tabs
+(setq-default indent-tabs-mode nil)
