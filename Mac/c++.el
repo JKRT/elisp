@@ -20,7 +20,6 @@
 ;Load company ironmode, and add other configurations for company-mode.
  (eval-after-load 'company
    '(add-to-list
-     'company-backends '(company-irony-c-headers company-irony company-yasnippet)))
-
+     'company-backends '(company-irony-c-headers company-irony company-yasnippet)))					
 ;Load c++ config functions
 (my-cpp-config)
