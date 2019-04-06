@@ -1,4 +1,3 @@
-
 ;Make sure to recompile the essential emacs libraries.
 (byte-recompile-directory (expand-file-name "~/.emacs.d/elisp/Mac/.") 0)
 
@@ -18,5 +17,5 @@
 (load-file "~/.emacs.d/elisp/Mac/themeChange.elc")
 (load-file "~/.emacs.d/elisp/Mac/melpa.elc")
 (load-file "~/.emacs.d/elisp/Mac/modelica-mode/modelica-mode.elc")
-;For thesis writing..
+;For thesis writing
 (load-file "~/.emacs.d/elisp/Mac/emacs-grammarly/emacs-grammarly.elc")
