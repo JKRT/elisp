@@ -18,6 +18,5 @@
 (load-file "~/.emacs.d/elisp/Mac/themeChange.elc")
 (load-file "~/.emacs.d/elisp/Mac/melpa.elc")
 (load-file "~/.emacs.d/elisp/Mac/modelica-mode/modelica-mode.elc")
-
 ;For thesis writing..
 (load-file "~/.emacs.d/elisp/Mac/emacs-grammarly/emacs-grammarly.elc")
