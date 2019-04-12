@@ -6,6 +6,7 @@
 ;turn of annoying sound when switching between buffers using touchpad.el
 (setq ring-bell-function 'ignore)
 (display-time-mode 1)
+(cua-mode 0)
 ;Load configuration files that effects other modes
 (load-file "~/.emacs.d/elisp/Mac/Ielm.elc")
 (load-file "~/.emacs.d/elisp/Mac/brackets.elc")

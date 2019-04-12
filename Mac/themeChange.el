@@ -1,4 +1,3 @@
-(require 'material)		
 (defun clocktime()
   "Routine to change theme depending on the time of the day.
   Note that the material package needs to be installed"
@@ -13,4 +12,4 @@
       (load-theme 'material t)
     (load-theme 'material-light t)))
 ;Call the function every hour
-(run-with-timer 0 3600 'theme-change-during-night) 
+(run-with-timer 0 3600 'theme-change-during-night)

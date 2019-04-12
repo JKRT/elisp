@@ -1,6 +1,5 @@
 ; Code for switching buffers using mac swiping on the MacBook pro 2015 touchbar 
-(defvar *my-previous-buffer* t
-  "can we switch?")
+(defvar *my-previous-buffer* t "can we switch?")
 
 (defun my-previous-buffer ()
   (interactive)
