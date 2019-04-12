@@ -1,3 +1,4 @@
+; Code for switching buffers using mac swiping on the MacBook pro 2015 touchbar 
 (defvar *my-previous-buffer* t
   "can we switch?")
 
@@ -19,6 +20,7 @@
   (when *my-next-buffer*
     (next-buffer)
     (setq *my-next-buffer* nil)
+    ;Small delay so things do not go to crazy
     (run-at-time "1 sec" nil (lambda ()
                                (setq *my-next-buffer* t)))))
 
