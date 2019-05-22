@@ -7,7 +7,7 @@
 (load-file "~/.emacs.d/elisp/Linux/keybindings.elc")
 (load-file "~/.emacs.d/elisp/Linux/melpa.elc")
 (load-file "~/.emacs.d/elisp/Linux/tags.elc")
-
+(load-file "~/.emacs.d/elisp/Linux/eglotSettings.elc")
 
 ;;Setting up Modelica mode
 (load-file "~/.emacs.d/elisp/Linux/modelica-mode/modelica-mode.elc")
@@ -20,3 +20,4 @@
 (load-file "~/.emacs.d/elisp/Linux/doremi.el/doremi.elc")
 ;;Turn of tabs
 (setq-default indent-tabs-mode nil)
+(setq visible-bell t)
