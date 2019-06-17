@@ -23,3 +23,4 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (add-hook 'lsp-mode-hook 'lsp-settings)
 (add-hook 'c++-mode-hook 'lsp)
+(add-hook 'julia-mode-hook 'lsp)

@@ -416,31 +416,7 @@
 
 (defun mdc-indent-line ()
   "Indentation for Modelica."
-  (let ((pos (- (point-max) (point))) beg beg-anno end-anno)
-    (message "Indenting `%s'..." (buffer-name))
-    (beginning-of-line)
-    (setq beg (point))
-    ;; no indentation of invisible text (hidden annotations)
-    (if (mdc-within-overlay 'invisible)
-  	()
-      ;; no indentation if preceeding newline is quoted
-      (if (and (> (point) 2)
-  		   (progn
-  		 (forward-char -2)
-  		 (looking-at "[\\]\n")))
-  	  (forward-char 2)
-  	;; else indent line
-  	(goto-char beg)
-  	(skip-chars-forward " \t")
-  	(let ((indent (mdc-calculate-indent)))
-  	  (if (= indent (current-column))
-  		  ;; nothing to be done
-  		  ()
-  		(delete-region beg (point))
-  		(indent-to indent)))))
-    ;; return to the old position inside the line
-    (if (> (- (point-max) pos) (point))
-  	(goto-char (- (point-max) pos)))))
+    (fset 'twoSpaces "  "))
 
 (defun mdc-calculate-indent ()
   "Calculate indentation for current line;
@@ -677,12 +653,10 @@
 		  ;;  "algorithm" "equation" "external"
 		  ;;  "else" "elseif" "elsewhen"
 		  ;;  "loop" "protected" "public" "then")
-		  (concat
-		   "[\]\);]\\|"
-		   "\\<"
-		   "\\(algorithm\\|e\\(lse\\(if\\|when\\)?\\|quation\\|"
-		   "xternal\\)\\|loop\\|p\\(rotected\\|ublic\\)\\|then\\)"
-		   "\\>")
+                  (concat (regexp-opt '("]" ")" ";"
+                                        "external"
+                                        "else" "elseif" "elsewhen"
+                                        "loop" "then" "match" ".+matchcontinue" "try" "case" "local")))
 		  ref-point 'no-error)
 		 (and
 		  (> (point) ref-point)
