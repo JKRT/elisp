@@ -17,8 +17,12 @@
       (byte-compile-file-if-el-but-no-elc (file-expand-wildcards "*.el")))
   ;;Otherwise just recompile this directory in a regular fashion
   (byte-recompile-directory "./"))
-
 ;;Load compiled files
-(load-file "commands.elc")
-(load-file "melpa.elc")
-(load-file "batchEdit.elc")
+(if (eq system-type 'gnu/linux)
+    (progn
+    (load-file "~/.emacs.d/elisp/General/commands.elc")
+    (load-file "~/.emacs.d/elisp/General/melpa.elc")
+    (load-file "~/.emacs.d/elisp/General/batchEdit.elc")
+    (load-file "~/.emacs.d/elisp/General/buffers.elc"))
+  (print "Fixme"))
+
