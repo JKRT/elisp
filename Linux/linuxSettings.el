@@ -1,6 +1,7 @@
 ;Recompile all files that where recently changed for fast loading
 (byte-recompile-directory (expand-file-name "~/.emacs.d/elisp/Linux/.") 0)
-;Load settings for other modes
+(byte-recompile-directory (expand-file-name "~/.emacs.d/elisp/General/.") 0)
+;Load settings for other modes Linux specific
 (load-file "~/.emacs.d/elisp/Linux/settings.elc")
 (load-file "~/.emacs.d/elisp/Linux/brackets.elc")
 (load-file "~/.emacs.d/elisp/Linux/c++.elc")
@@ -10,6 +11,8 @@
 (load-file "~/.emacs.d/elisp/Linux/eglotSettings.elc")
 (load-file "~/.emacs.d/elisp/Linux/susan-mode/susanMode.elc")
 (load-file "~/.emacs.d/elisp/Linux/modelica-mode/modelica-mode.elc")
+;Load things from General
+(load-file "~/.emacs.d/elisp/General/loadGeneral.elc")
 ;;Setting up Modelica mode
 (autoload 'modelica-mode "modelica-mode" "Modelica Editing Mode" t)
 (setq auto-mode-alist (cons '("\.mo$" . modelica-mode) auto-mode-alist))

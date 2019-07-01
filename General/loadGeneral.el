@@ -1,6 +1,3 @@
-(setq-local EMACS-GENERAL (concat EMACS_HOME "General/"))
-;Byte recompile does not seem to work as it should on Windows.
-(byte-recompile-directory (expand-file-name (concat EMACS-GENERAL "/.") 0))
 ;If we have one .el file and that file does not have a corresponding elc file. Compile it anyway.
 (defun byte-compile-file-if-el-but-no-elc (files)
   (dolist (filename files)
@@ -10,7 +7,18 @@
 		     (regexp-opt '("~"  "#"))
 		     filename)))
 	      (byte-compile-file filename))))
-;Force recompile iff we did not succeed before
-(byte-compile-file-if-el-but-no-elc (file-expand-wildcards "*.el"))
-(load-file (concat EMACS-GENERAL "commands.elc"))
-(load-file (concat EMACS-GENERAL "melpa.elc"))
+
+(if (eq system-type 'windows-nt)
+    (progn
+      (setq-local EMACS-GENERAL (concat EMACS_HOME "General/"))
+      ;;Byte recompile does not seem to work as it should on Windows.
+      (byte-recompile-directory (expand-file-name (concat EMACS-GENERAL "/.") 0))
+      ;;Force recompile iff we did not succeed before
+      (byte-compile-file-if-el-but-no-elc (file-expand-wildcards "*.el")))
+  ;;Otherwise just recompile this directory in a regular fashion
+  (byte-recompile-directory "./"))
+
+;;Load compiled files
+(load-file "commands.elc")
+(load-file "melpa.elc")
+(load-file "batchEdit.elc")
