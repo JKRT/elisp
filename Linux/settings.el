@@ -1,6 +1,6 @@
 ;Global settings relating to buffers 
 
-(menu-bar-mode 0)
+(menu-bar-mode 1)
 (linum-mode 1)
 (show-paren-mode 1)
 (setq show-paren-delay 0)
@@ -82,10 +82,5 @@
 (global-set-key (kbd "M-n") 'move-line-region-down)
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
-(global-set-key (kbd "<f5>") 'smart-compile) ; clever compiling.
-(global-set-key (kbd "<f6>") 'shell) ; Open cmd
-(global-set-key (kbd "<f7>") 'find-file) ;; f7 to find files.
 (global-set-key (kbd "<C-mouse-1>") 'find-tag)
-
-
-
+(setq ring-bell-function 'ignore)
