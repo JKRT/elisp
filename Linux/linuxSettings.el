@@ -8,6 +8,7 @@
 (load-file "~/.emacs.d/elisp/Linux/keybindings.elc")
 (load-file "~/.emacs.d/elisp/Linux/melpa.elc")
 (load-file "~/.emacs.d/elisp/Linux/tags.elc")
+(load-file "~/.emacs.d/elisp/Linux/tablegenmode.elc")
 (load-file "~/.emacs.d/elisp/Linux/eglotSettings.elc")
 (load-file "~/.emacs.d/elisp/Linux/susan-mode/susanMode.elc")
 (load-file "~/.emacs.d/elisp/Linux/modelica-mode/modelica-mode.elc")
@@ -24,3 +25,5 @@
 (setq-default indent-tabs-mode nil)
 ;Please be quiet emacs :) 
 (setq visible-bell t)
+(setq auto-save-default nil)
+

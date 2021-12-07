@@ -77,6 +77,10 @@
   (interactive "r\np")
   (if (use-region-p) (move-region-down start end n) (move-line-down n)))
 
+(add-hook 'yaml-mode-hook
+    '(lambda ()
+       (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
 ;;My own keybindings.
 (global-set-key (kbd "M-p") 'move-line-region-up)
 (global-set-key (kbd "M-n") 'move-line-region-down)
@@ -84,3 +88,12 @@
 (global-set-key (kbd "M-<down>") 'move-line-down)
 (global-set-key (kbd "<C-mouse-1>") 'find-tag)
 (setq ring-bell-function 'ignore)
+
+
+;; (require 'julia-mode)
+;; (push "/home/johti17/.emacs.d/elpa/lsp-julia-20210329.1551" load-path)
+;; (require 'lsp-julia)
+;; (require 'lsp-mode)
+;; ;; Configure lsp + julia
+;; (add-hook 'julia-mode-hook #'lsp-mode)
+;; (add-hook 'julia-mode-hook #'lsp)
