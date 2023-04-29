@@ -1,4 +1,4 @@
-;Global settings relating to buffers 
+;Global settings relating to buffers
 
 (menu-bar-mode 1)
 (linum-mode 1)
@@ -7,22 +7,12 @@
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 (cua-mode t)
 (tool-bar-mode -1)
-(load-theme 'material t)
 (display-time-mode 1)
 
 (defun kill-all-buffers()
   "Kill all open buffers"
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
-
-
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/")
-   t)
-  (package-initialize))
 
 (defun move-line (n)
   "Move the current line up or down by N lines."

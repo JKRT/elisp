@@ -12,6 +12,5 @@
 		     filename)))
 	      (byte-compile-file filename))))
 ;;Force recompile iff we did not succeed before
-(byte-compile-file-if-el-but-no-elc (file-expand-wildcards "*.el"))
+;(byte-compile-file-if-el-but-no-elc (file-expand-wildcards "*.el"))
 (load-file (concat EMACS-GENERAL "commands.elc"))
-(load-file (concat EMACS-GENERAL "melpa.elc"))
