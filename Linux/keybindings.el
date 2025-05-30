@@ -1,4 +1,4 @@
-					;Global keybindings 
+                                        ;Global keybindings
 (global-set-key (kbd "<kp-insert>") 'other-window)
 (global-set-key (kbd "<kp-begin>")  'list-buffers)
 (global-set-key (kbd "<kp-right>") 'next-buffer)
@@ -11,3 +11,14 @@
 (global-set-key (kbd "s-a") 'mark-whole-buffer)
 (global-set-key (kbd "s-j") 'ace-jump-mode)
 (global-set-key (kbd "<mouse-8>") 'clipboard-yank)
+(global-set-key (kbd "<mouse-9>") 'company-complete-common-or-cycle)
+
+(defun activate-company-if-not-active ()
+  (unless (symbol-value (package-installed-p 'company-mode))
+    (global-company-mode 1)))
+
+(when (package-installed-p 'company)
+  (activate-company-if-not-active)
+  (global-set-key (kbd "<f12>") 'company-complete))
+
+                                        ;Idents two chars below the current line

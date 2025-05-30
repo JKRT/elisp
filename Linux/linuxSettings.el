@@ -1,11 +1,12 @@
+;; -*- lexical-binding: t; -*-
 (setq EMACS_HOME "~/.emacs.d/elisp/")
 ;Recompile all files that where recently changed for fast loading
 (byte-recompile-directory (expand-file-name "~/.emacs.d/elisp/Linux/.") 0)
 (byte-recompile-directory (expand-file-name "~/.emacs.d/elisp/General/.") 0)
 (native-compile-async (expand-file-name "~/.emacs.d/elisp/Linux/.") 'recursively)
-(while (or comp-files-queue
-               (> (comp-async-runnings) 0))
-      (sleep-for 1))
+;; (while (or comp-files-queue
+;;                (> (comp-async-runnings) 0))
+;;       (sleep-for 1))
 ;Load settings for other modes Linux specific
 (load-file "~/.emacs.d/elisp/Linux/settings.elc")
 (load-file "~/.emacs.d/elisp/Linux/brackets.elc")

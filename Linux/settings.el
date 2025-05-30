@@ -1,7 +1,7 @@
 ;Global settings relating to buffers
 
 (menu-bar-mode 1)
-(linum-mode 1)
+(line-number-mode 1)
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
