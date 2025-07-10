@@ -4,7 +4,7 @@
 (line-number-mode 1)
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-(add-hook 'find-file-hook (lambda () (linum-mode 1)))
+(add-hook 'find-file-hook (lambda () (line-number-mode 1)))
 (cua-mode t)
 (tool-bar-mode -1)
 (display-time-mode 1)
