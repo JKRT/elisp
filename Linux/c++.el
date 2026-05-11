@@ -1,5 +1,6 @@
 ;Linux related C++ configurations 
 
-;C++ related hoooks
-(add-hook 'c++-mode-hook #'lsp)
+;C++ related hooks
+(when (fboundp 'lsp)
+  (add-hook 'c++-mode-hook #'lsp))
 

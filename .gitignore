@@ -51,3 +51,11 @@ flycheck_*.el
 
 
 #Further changes go here
+
+# Vendored/local package checkout.
+/eat/
+
+# Local hidden files/directories.
+.*
+!.gitignore
+!.gitmodules

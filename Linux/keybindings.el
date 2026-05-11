@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
                                         ;Global keybindings
 (global-set-key (kbd "<kp-insert>") 'other-window)
 (global-set-key (kbd "<kp-begin>")  'list-buffers)
@@ -21,4 +23,8 @@
   (activate-company-if-not-active)
   (global-set-key (kbd "<f12>") 'company-complete))
 
-                                        ;Idents two chars below the current line
+
+; Settings for Emacs copilot
+;Define and set keybindings for copilot if installed. Use Ctrl+Tab to accept completions.
+(if (package-installed-p 'copilot)
+    (global-set-key (kbd "<C-tab>") 'copilot-accept-completion))
