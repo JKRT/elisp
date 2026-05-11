@@ -1,0 +1,47 @@
+# Emacs generated files
+*.elc
+*.eln
+*.elnc
+*~
+\#*\#
+.#*
+*.swp
+*.swo
+
+# Emacs directories/files
+.elpa/
+elpa/
+auto-save-list/
+history
+.tramp
+.url-cache/
+.ido.last
+.recentf
+.savehist
+.saveplace
+.persist
+.agents/
+.codex/
+
+# Misc local metadata and agent/system folders
+autosaves/
+
+# Local tool / editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.log
+
+# Node/Rust/etc.
+node_modules/
+target/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# General caches
+.cache/
